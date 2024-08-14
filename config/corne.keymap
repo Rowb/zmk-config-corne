@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <rgb_colors.h>
 
 
 #define DEF 0
@@ -11,6 +10,18 @@
 #define RSE 2
 #define ADJ 3
 #define GME 4
+
+#define GREEN 0x00ff00
+#define RED 0xff0000
+#define BLUE 0x0000ff
+#define TEAL 0x008080
+#define ORANGE 0xffa500
+#define YELLOW 0xffff00
+#define GOLD 0xffd700
+#define PURPLE 0x800080
+#define PINK 0xffc0cb
+#define WHITE 0xffffff
+#define ______ 0x000000
 
 &led_strip {
     chain-length = <27>;
@@ -25,30 +36,30 @@
 
         lower {
             bindings = <
-                PURPLE   PINK   PINK   PINK   PINK   PINK                                            ______   GOLD ORANGE ORANGE ORANGE    RED
-                PURPLE ______ ORANGE    RED ORANGE ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
-                  BLUE ______    RED    RED    RED ______ ______ ______ ______  ______ ______ ______ ______ YELLOW YELLOW YELLOW    RED   BLUE
-                ______ ______ ORANGE ORANGE ORANGE        ______  GREEN ______  ______ ______ ______        YELLOW YELLOW ORANGE    RED ______
+                ______   RED   RED   RED   RED   RED                         RED   RED RED RED RED    RED
+                BLUE BLUE BLUE    BLUE BLUE BLUE                              BLUE BLUE BLUE BLUE BLUE BLUE
+                ______ PURPLE    PURPLE    PURPLE    PURPLE PURPLE                          PURPLE PURPLE PURPLE PURPLE    PURPLE   ______
+                                                          YELLOW  ______ ______  ______ ______ YELLOW
                 >;
-            layer-id = <lower_layer>;
+            layer-id = <LWR>;
         };
         raise {
             bindings = <
-                ______ ______ ______ ______ ______ ______                                              PINK   PINK   PINK   PINK   PINK ______
-                ______   BLUE ______   BLUE   BLUE   BLUE                                            ______ ______ ______ ______ ______   BLUE
-                  BLUE ______ ______ ______ ______ ______ ______ ______ ______  ______ ______ ______ ______ ______ ______ ______ ______   BLUE
-                ______ ______ ______ ______ ______        ______ ______ ______  ______  GREEN ______        ______ ______ ______ ______ ______
+                WHITE   RED   BLUE   BLUE   BLUE   RED                                            ______   GOLD ORANGE ORANGE ORANGE    RED
+                RED RED BLUE    BLUE BLUE RED                                            ______ YELLOW BLUE BLUE BLUE ______
+                  ______ BLUE    BLUE    BLUE    BLUE PURPLE                                            ______ YELLOW YELLOW YELLOW    RED   BLUE
+                                                          ______  ______ GREEN  GREEN ______ ______
                 >;
-            layer-id = <raise_layer>;
+            layer-id = <RSE>;
         };
-        gaming {
+        adjust {
             bindings = <
-                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
-                ______   TEAL ______    RED ______ ______                                            ______ ______ ______ ______ ______ ______
-                ______   BLUE    RED    RED    RED ______ ORANGE   BLUE ______  ______ ______ ______ ______ ______ ______ ______ ______ ______
-                ______   BLUE ______ ______ ______           RED ______ ______  ______  GREEN ______        ______ ______ ______ ______ ______
+                PURPLE  TEAL  ______  ______  ______  ______              ______  ______  ______  ______  ______  ______
+                RED BLUE  BLUE  BLUE  BLUE  BLUE                           BLUE BLUE BLUE BLUE BLUE RED
+                  GREEN ______     ______     ______    ______ ______                                            ______ ______ ______ ______    ______   ______
+                                                          ______  ______ ______  ______ ______ ______
                 >;
-            layer-id = <adjust_layer>;
+            layer-id = <ADJ>;
         };
     };
 };
