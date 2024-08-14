@@ -1,0 +1,275 @@
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layers:
+  default:
+  - {t: ']', h: LEFT GUI}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '[', h: RIGHT GUI}
+  - LCTRL
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - {t: '''', h: RCTRL}
+  - LALT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: \, h: RALT}
+  - {t: TAB, h: raise}
+  - {t: SPACE, h: LSHFT}
+  - {t: RET, h: lower}
+  - {t: ESC, h: lower}
+  - BACKSPACE
+  - {t: DEL, h: raise}
+  lower:
+  - _
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - {t: +, h: LCTRL}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - {t: '-', h: RCTRL}
+  - {t: '=', h: LALT}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: TAB, h: adjust}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: DEL, h: adjust}
+  raise:
+  - KP NUM
+  - /
+  - '1'
+  - '2'
+  - '3'
+  - '-'
+  - VOL UP
+  - HOME
+  - PSCRN
+  - PG UP
+  - SLCK
+  - CAPS
+  - {t: '=', h: LCTRL}
+  - '*'
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - MUTE
+  - LEFT
+  - UP
+  - RIGHT
+  - INS
+  - {t: APP, h: RCTRL}
+  - {t: ▽, type: trans}
+  - '0'
+  - '7'
+  - '8'
+  - '9'
+  - .
+  - VOL DN
+  - END
+  - DOWN
+  - PG DN
+  - PAUSE BREAK
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: RET, h: adjust}
+  - {t: ESC, h: adjust}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  adjust:
+  - '&bootloader'
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - {t: BT, h: '4'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '0'}
+  - BT CLR
+  - OUT TOG
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - OUT TOG
+  - {type: held}
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  game:
+  - ESCAPE
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - F1
+  - F2
+  - T
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - VOLUME UP
+  - LEFT SHIFT
+  - Q
+  - W
+  - E
+  - R
+  - G
+  - '`'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Alt+ TAB
+  - VOL DN
+  - LCTRL
+  - A
+  - S
+  - D
+  - B
+  - F
+  - {t: ▽, type: trans}
+  - M
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+ TAB
+  - MUTE
+  - C
+  - SPACE
+  - TAB
+  - K
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  rgb:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RGB ON
+  - RGB OFF
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RGB EFF
+  - RGB EFR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RGB BRI
+  - RGB BRD
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [0, 38, 5]
+  k: BT CLR
+- p: [29, 28]
+  k: SPACE
+- p: [17, 16]
+  k: ENTER
+- p: [5, 6]
+  k: CLCK
+- p: [27, 14]
+  k: {t: game, h: toggle}
+- p: [15, 3]
+  k: {t: default, h: toggle}
+- p: [4, 17, 29]
+  k: {t: rgb, h: toggle}
