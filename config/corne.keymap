@@ -4,11 +4,11 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &led_strip {
-  chain-length = <27>;
-  // chain-length = <27>;
-  // 21 backlight + 6 glowlight
-};
+    chain-length = <27>;
 
+    // chain-length = <27>;
+    // 21 backlight + 6 glowlight
+};
 
 #define TAPPING_TERM 200
 #define DEF 0
@@ -18,8 +18,8 @@
 #define GME 4
 
 / {
-  behaviors {
-    /*
+    behaviors {
+        /*
     * td_lock groups locking functions into one key:
     *  - tap once to lock the host
     *  - tap twice to put the host to sleep
@@ -135,4 +135,4 @@
             >;
         };
     };
-
+};
