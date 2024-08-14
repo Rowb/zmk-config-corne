@@ -16,6 +16,48 @@
   // 21 backlight + 6 glowlight
 };
 
+#include <dt-bindings/zmk/rgb_colors.h>
+/ {
+    underglow-layer {
+        compatible  = "zmk,underglow-layer";
+
+        lower {
+            bindings = <
+                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
+                PURPLE   PINK   PINK   PINK   PINK   PINK                                            ______   GOLD ORANGE ORANGE ORANGE    RED
+                PURPLE ______ ______ ORANGE ______ ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
+                PURPLE ______ ORANGE    RED ORANGE ______                                            ______ YELLOW YELLOW YELLOW ORANGE ______
+                  BLUE ______    RED    RED    RED ______ ______ ______ ______  ______ ______ ______ ______ YELLOW YELLOW YELLOW    RED   BLUE
+                ______ ______ ORANGE ORANGE ORANGE        ______  GREEN ______  ______ ______ ______        YELLOW YELLOW ORANGE    RED ______
+                >;
+            layer-id = <lower_layer>;
+        };
+        raise {
+            bindings = <
+                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                              PINK   PINK   PINK   PINK   PINK ______
+                ______   BLUE ______   BLUE   BLUE   BLUE                                            ______ ______ ______ ______ ______   BLUE
+                ______   BLUE ______ ______ ______   BLUE                                            ______ ______ ______ ______ ______ ______
+                  BLUE ______ ______ ______ ______ ______ ______ ______ ______  ______ ______ ______ ______ ______ ______ ______ ______   BLUE
+                ______ ______ ______ ______ ______        ______ ______ ______  ______  GREEN ______        ______ ______ ______ ______ ______
+                >;
+            layer-id = <raise_layer>;
+        };
+        gaming {
+            bindings = <
+                ______ ______ ______ ______ ______                                                          ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+                ______ ______ ______ ______ ______ ______                                            ______ ______ ______ ______ ______ ______
+                ______   TEAL ______    RED ______ ______                                            ______ ______ ______ ______ ______ ______
+                ______   BLUE    RED    RED    RED ______ ORANGE   BLUE ______  ______ ______ ______ ______ ______ ______ ______ ______ ______
+                ______   BLUE ______ ______ ______           RED ______ ______  ______  GREEN ______        ______ ______ ______ ______ ______
+                >;
+            layer-id = <adjust_layer>;
+        };
+    };
+};
+
+
 &lt { quick-tap-ms = <200>; };
 
 &mt { quick-tap-ms = <200>; };
