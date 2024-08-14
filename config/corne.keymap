@@ -4,22 +4,17 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &led_strip {
-    chain-length = <27>;
-
-    // chain-length = <27>;
-    // 21 backlight + 6 glowlight
+  chain-length = <27>;
+  // chain-length = <27>;
+  // 21 backlight + 6 glowlight
 };
 
+
 #define TAPPING_TERM 200
-#define DEF 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
-#define GME 4
 
 / {
-    behaviors {
-        /*
+  behaviors {
+    /*
     * td_lock groups locking functions into one key:
     *  - tap once to lock the host
     *  - tap twice to put the host to sleep
@@ -34,31 +29,49 @@
     };
   };
 
-    combos {
-        compatible = "zmk,combos";
+  combos {
+    compatible = "zmk,combos";
 
-        to_game_layer {
-            bindings = <&to 4>;
-            key-positions = <27 14>;
-        };
-
-        to_default_layer {
-            bindings = <&to 0>;
-            key-positions = <15 3>;
-        };
+    Clear_BLE_Profile {
+      bindings = <&bt BT_CLR>;
+      key-positions = <0 38 5>;
     };
 
+    Space {
+      bindings = <&kp SPACE>;
+      key-positions = <29 28>;
+    };
+
+    Enter {
+      bindings = <&kp ENTER>;
+      key-positions = <17 16>;
+    };
+
+    Capslock {
+      bindings = <&kp CLCK>;
+      key-positions = <5 6>;
+    };
+  };
+
+  macros {
+    git_status: git_status {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S>;
+      label = "GIT_STATUS";
+    };
+    git_commit_all: git_commit_all {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
+      label = "GIT_COMMIT";
+    };
+  };
 
   keymap {
     compatible = "zmk,keymap";
 
- default_layer {
-            // -----------------------------------------------------------------------------------------
-            //        |   ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  F11   | 
-            //        | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |CTRL/'|
-            //        | LALT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RALT |
-            //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
-
+        default_layer {
             bindings = <
 &mt LEFT_GUI RIGHT_BRACKET  &kp Q  &kp W  &kp E  &kp R        &kp T                                      &kp Y          &kp U        &kp I      &kp O    &kp P     &mt RIGHT_GUI LEFT_BRACKET
 &kp LCTRL                   &kp A  &kp S  &kp D  &kp F        &kp G                                      &kp H          &kp J        &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
@@ -68,12 +81,6 @@
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |     |  _  |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |
-            //       |  +  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
-            //       |  =  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &kp UNDER       &kp F1    &kp F2  &kp F3    &kp F4       &kp F5                     &kp F6     &kp F7       &kp F8    &kp F9    &kp F10   &kp F11
 &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR     &kp PRCNT                  &kp CARET  &kp AMPS     &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
@@ -83,11 +90,6 @@
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |     | NMLK |  /  |  7  |  8  |  9  |  -  |   | VOLU| HOME| PRSC| PGUP| SCLK| CLCK|     |
-            //       | CTRL |  *  |  4  |  5  |  6  |  +  |   | MUT | LEFT|  UP | RGHT| INS | APP |
-            //       |      |  0  |  1  |  2  |  3  |  .  |   | VOLD| END | DOWN| PGDN| PAUS|     |
-            //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
 &kp KP_NUM       &kp SLASH     &kp N1        &kp N2        &kp N3        &kp MINUS                             &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
@@ -98,12 +100,6 @@
         };
 
         adjust_layer {
-            // -----------------------------------------------------------------------------------------
-            // | RST | BLDR |     |     |     |     |     |   |     |     |     |     |     | BLDR | RST |
-            //       | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
-            //       |      |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                          |     |     |     |   |     |     |     |
-
             bindings = <
 &bootloader   &sys_reset    &none         &none         &none         &none                         &none         &none         &none         &none         &none         &bootloader
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
@@ -120,5 +116,5 @@
                                         &kp C   &kp SPACE     &kp TAB  &kp K  &trans     &trans
             >;
         };
-    };
+  };
 };
