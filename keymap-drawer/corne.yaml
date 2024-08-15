@@ -235,9 +235,9 @@ combos:
   k: K
   l: [game]
 - p: [2, 3, 4]
-  k: COPY
+  k: Ctl+ C
   l: [default]
 - p: [2, 4]
-  k: PASTE
+  k: Ctl+ V
 - p: [2, 3]
-  k: CUT
+  k: Ctl+ X
