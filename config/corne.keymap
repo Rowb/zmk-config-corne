@@ -83,18 +83,18 @@
         };
 
         copy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp LC(C)>;
             key-positions = <2 3 4>;
             layers = <0>;
         };
 
         paste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LC(V)>;
             key-positions = <2 4>;
         };
 
         cut {
-            bindings = <&kp K_CUT>;
+            bindings = <&kp LC(X)>;
             key-positions = <2 3>;
         };
     };
