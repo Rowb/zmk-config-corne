@@ -234,3 +234,10 @@ combos:
 - p: [37, 38]
   k: K
   l: [game]
+- p: [2, 3, 4]
+  k: COPY
+  l: [default]
+- p: [2, 4]
+  k: PASTE
+- p: [2, 3]
+  k: CUT
