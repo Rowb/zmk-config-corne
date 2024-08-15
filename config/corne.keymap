@@ -81,6 +81,22 @@
             key-positions = <37 38>;
             layers = <4>;
         };
+
+        copy {
+            bindings = <&kp K_COPY>;
+            key-positions = <2 3 4>;
+            layers = <0>;
+        };
+
+        paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <2 4>;
+        };
+
+        cut {
+            bindings = <&kp K_CUT>;
+            key-positions = <2 3>;
+        };
     };
 
     macros {
