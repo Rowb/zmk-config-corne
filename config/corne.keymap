@@ -46,16 +46,13 @@
         to_game_layer {
             bindings = <&to 4>;
             key-positions = <27 14>;
+            layers = <0>;
         };
 
         to_default {
             bindings = <&to 0>;
             key-positions = <15 3>;
-        };
-
-        to_rgb_layer {
-            bindings = <&to 0>;
-            key-positions = <4 17 29>;
+            layers = <4>;
         };
 
         backspace_combo {
@@ -85,17 +82,19 @@
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <2 3 4>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
             key-positions = <2 4>;
+            layers = <0 2 1>;
         };
 
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <2 3>;
+            layers = <0 1 2>;
         };
     };
 
@@ -110,7 +109,7 @@
         git_commit_all: git_commit_all {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp SPACE &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
             label = "GIT_COMMIT";
         };
 
@@ -150,10 +149,10 @@
 
         lower_layer {
             bindings = <
-&kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
-                                  &lt 3 TAB  &trans    &trans       &trans     &trans    &lt 3 DEL
+&kp UNDER       &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp F6     &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
+&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &trans
+                                  &kp TAB   &trans    &trans       &trans     &trans    &kp DEL
             >;
         };
 
@@ -162,7 +161,7 @@
 &kp KP_NUM       &kp SLASH     &kp N1        &kp N2        &kp N3        &kp MINUS     &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
 &mt LCTRL EQUAL  &kp ASTERISK  &kp N4        &kp N5        &kp N6        &kp PLUS      &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
 &trans           &kp NUMBER_0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERIOD    &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                             &trans        &trans        &lt 3 RET     &lt 3 ESC     &trans    &trans
+                                             &trans        &trans        &kp RET       &kp ESCAPE    &trans    &trans
             >;
         };
 
@@ -182,6 +181,15 @@
 &kp LCTRL       &kp A   &kp S   &kp D   &kp B      &kp F           &trans     &kp M   &trans  &trans  &kp LS(TAB)  &kp K_MUTE
                                 &kp C   &kp SPACE  &kp TAB         &kp K      &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adj_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
