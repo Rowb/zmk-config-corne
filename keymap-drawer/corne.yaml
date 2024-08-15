@@ -136,36 +136,36 @@ layers:
   - ''
   - ''
   - ''
+  - RGB TOG
+  - RGB EFF
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - '&bootloader'
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - {t: BT, h: '4'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '0'}
-  - BT CLR
-  - OUT TOG
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - RGB BRI
+  - RGB HUI
+  - RGB SAI
   - ''
   - ''
   - ''
   - OUT TOG
+  - ''
+  - ''
+  - '&git_add'
+  - '&git_commit_all'
+  - '&git_push'
+  - RGB BRD
+  - RGB HUD
+  - RGB SAD
+  - ''
+  - ''
+  - ''
   - {type: held}
   - ''
   - {type: held}
@@ -215,61 +215,22 @@ layers:
   - K
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  rgb:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - RGB ON
-  - RGB OFF
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - RGB EFF
-  - RGB EFR
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - RGB BRI
-  - RGB BRD
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
-- p: [0, 38, 5]
-  k: BT CLR
-- p: [29, 28]
-  k: SPACE
-- p: [17, 16]
-  k: ENTER
-- p: [5, 6]
-  k: CLCK
 - p: [27, 14]
   k: {t: game, h: toggle}
 - p: [15, 3]
   k: {t: default, h: toggle}
 - p: [4, 17, 29]
-  k: {t: rgb, h: toggle}
+  k: {t: default, h: toggle}
+- p: [37, 36]
+  k: BACKSPACE
+  l: [default]
+- p: [37, 38]
+  k: DEL
+  l: [default]
+- p: [29, 28]
+  k: '&git_pull'
+  l: [adjust]
+- p: [37, 38]
+  k: K
+  l: [game]
