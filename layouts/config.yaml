@@ -19,7 +19,58 @@ draw_config:
   append_colon_to_layer_header: false
   small_pad: 4
 
-  svg_extra_style: ''
+  svg_extra_style: | 
+    rect.key,
+    rect.combo {
+        fill: var(--color--key--bg);
+        stroke: var(--color--key--border);
+    }
+    .tap {
+        fill: var(--color--key--text--tap);
+    }
+    .shifted,
+    .hold {
+        font-size: 18px;
+        text-anchor: middle;
+    }
+    .shifted {
+        dominant-baseline: hanging;
+        fill: var(--color--key--text--shifted);
+        translate: -25px 2px;
+    }
+    .hold {
+        dominant-baseline: ideographic;
+        fill: var(--color--key--text--hold);
+    }
+
+        .combo {
+        --color--key--bg: var(--color--combo--bg);
+        --color--key--border: var(--color--combo--border);
+        --color--key--text--tap: var(--color--combo--text--tap);
+        --color--key--text--shifted: var(--color--combo--text--shifted);
+        --color--key--text--hold: var(--color--combo--text--hold);
+    }
+    rect.combo {
+        stroke-width: 0;
+    }
+    path.combo {
+        stroke-width: 1;
+        stroke: var(--color--combo--dendron);
+        stroke-dasharray: 2, 2;
+        fill: none;
+    }
+    .combo.tap {
+        font-size: 16px;
+    }
+    .combo.shifted {
+        font-size: 13px;
+        translate: -9px -2px;
+    }
+    .combo.hold {
+        font-size: 16px;
+        /* translate: 2px 0px; */
+    }
+    
   footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
   shrink_wide_legends: 5
   glyph_tap_size: 26
@@ -43,6 +94,7 @@ parse_config:
     '&kp LS(TAB)': Win Prev
     '&kp LS(INS)': Paste
     '&kp LG(L)': Lock
+    '&lt LG(L)': Lock
     '&out OUT_USB': Out USB
     '&out OUT_BLE': Out BLE
     '&bt BT_SEL 0': BT 1
