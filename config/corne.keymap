@@ -110,7 +110,7 @@
         git_commit_all: git_commit_all {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp SPACE &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
             label = "GIT_COMMIT";
         };
 
