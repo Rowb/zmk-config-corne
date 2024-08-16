@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
-  - {t: ']', h: LEFT GUI}
+  - {t: ']', h: LEFT GUI, s: '}'}
   - Q
   - W
   - E
@@ -12,8 +12,8 @@ layers:
   - I
   - O
   - P
-  - {t: '[', h: RIGHT GUI}
-  - Ctrl
+  - {t: '[', h: RIGHT GUI, s: '{'}
+  - $$mdi:apple-keyboard-control$$
   - A
   - S
   - D
@@ -23,9 +23,9 @@ layers:
   - J
   - K
   - L
-  - ;
-  - {t: '''', h: Ctrl}
-  - Alt
+  - {t: ;, s: ':'}
+  - {t: '''', h: '$$mdi:apple-keyboard-control$$', s: '"'}
+  - $$mdi:apple-keyboard-option$$
   - Z
   - X
   - C
@@ -33,16 +33,16 @@ layers:
   - B
   - N
   - M
-  - ','
-  - .
-  - /
-  - {t: \, h: Alt}
-  - {t: ↹, h: raise}
-  - {t: ␣, h: Shift}
-  - {t: ⏎, h: lower}
-  - {t: Esc, h: lower}
-  - BACKSPACE
-  - {t: ⌦, h: raise}
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
+  - {t: '$$mdi:keyboard-tab$$', h: raise}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: RET, h: lower}
+  - {t: '$$mdi:keyboard-esc$$', h: lower}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: raise}
   lower:
   - _
   - F1
@@ -56,7 +56,7 @@ layers:
   - F9
   - F10
   - F11
-  - {t: +, h: Ctrl}
+  - {t: +, h: '$$mdi:apple-keyboard-control$$'}
   - '!'
   - '@'
   - '#'
@@ -67,66 +67,66 @@ layers:
   - '*'
   - (
   - )
-  - {t: '-', h: Ctrl}
-  - {t: '=', h: Alt}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: '-', h: '$$mdi:apple-keyboard-control$$', s: _}
+  - {t: '=', h: '$$mdi:apple-keyboard-option$$', s: +}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
   - {t: ▽, type: trans}
-  - {t: ↹, h: adjust}
+  - {t: '$$mdi:keyboard-tab$$', h: adjust}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ⌦, h: adjust}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: adjust}
   raise:
   - KP NUM
-  - /
-  - '1'
-  - '2'
-  - '3'
-  - '-'
-  - Vol Up
-  - Home
-  - Print Scrn
-  - Page Up
+  - {t: /, s: '?'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '-', s: _}
+  - $$mdi:volume-high$$
+  - HOME
+  - PSCRN
+  - PG UP
   - SLCK
-  - Caps Lock
-  - {t: '=', h: Ctrl}
+  - $$mdi:apple-keyboard-caps$$
+  - {t: '=', h: '$$mdi:apple-keyboard-control$$', s: +}
   - '*'
-  - '4'
-  - '5'
-  - '6'
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
   - +
-  - MUTE
-  - ←
-  - ↑
-  - →
-  - Insert
-  - {t: APP, h: Ctrl}
+  - $$mdi:volume-off$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-right-bold$$
+  - INS
+  - {t: APP, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
   - '0'
   - '7'
   - '8'
   - '9'
-  - .
-  - Vol Down
-  - End
-  - ↓
-  - Page Down
-  - Pause Break
+  - PERIOD
+  - $$mdi:volume-low$$
+  - END
+  - $$mdi:arrow-down-bold$$
+  - PG DN
+  - PAUSE BREAK
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ENTER, h: adjust}
-  - {t: Esc, h: adjust}
+  - {t: '$$mdi:keyboard-return$$', h: adjust}
+  - {t: '$$mdi:keyboard-esc$$', h: adjust}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   adjust:
@@ -142,7 +142,7 @@ layers:
   - ''
   - ''
   - ''
-  - BT CLR
+  - $$mdi:bluetooth-off$$
   - BT 1
   - BT 2
   - BT 3
@@ -174,10 +174,10 @@ layers:
   - {t: ▽, type: trans}
   game:
   - ESCAPE
-  - '1'
-  - '2'
-  - '3'
-  - '4'
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
   - '5'
   - F1
   - F2
@@ -191,13 +191,13 @@ layers:
   - E
   - R
   - G
-  - '`'
+  - {t: '`', s: '~'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+ ↹
-  - Vol Down
-  - Ctrl
+  - Alt+ $$mdi:keyboard-tab$$
+  - $$mdi:volume-low$$
+  - $$mdi:apple-keyboard-control$$
   - A
   - S
   - D
@@ -210,8 +210,8 @@ layers:
   - Win Prev
   - MUTE
   - C
-  - ␣
-  - ↹
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-tab$$
   - K
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -223,10 +223,10 @@ combos:
   k: {t: default, h: toggle}
   l: [game]
 - p: [37, 36]
-  k: BACKSPACE
+  k: {t: '$$mdi:backspace$$', type: backspace}
   l: [default]
 - p: [37, 38]
-  k: ⌦
+  k: $$mdi:backspace-reverse-outline$$
   l: [default]
 - p: [29, 28]
   k: '&git_pull'
@@ -236,12 +236,14 @@ combos:
   l: [game]
 - p: [2, 3, 4]
   k: Ctl+ C
-  l: [default, lower, raise]
+  l: [default]
   a: top
-  o: 0.15
+  o: 0.3
 - p: [2, 4]
   k: Ctl+ V
-  l: [default, raise, lower]
+  l: [default]
+  a: top
+  o: 1.0
 - p: [2, 3]
   k: Ctl+ X
-  l: [default, lower, raise]
+  l: [default]
