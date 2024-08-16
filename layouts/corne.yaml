@@ -37,7 +37,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
-  - {t: '$$mdi:keyboard-tab$$', s: L2}
+  - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:keyboard-space$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: lower}
   - {t: '$$mdi:keyboard-esc$$', h: lower}
