@@ -46,7 +46,7 @@
                 ______ PURPLE    PURPLE    PURPLE    PURPLE PURPLE                          PURPLE PURPLE PURPLE PURPLE    PURPLE   ______
                                                           YELLOW  ______ ______  ______ ______ YELLOW
                 >;
-            layer-id = <LWR>;
+            layer-id = <1>;
         };
         raise {
             bindings = <
@@ -55,7 +55,7 @@
                   ______ BLUE    BLUE    BLUE    BLUE PURPLE                                            ______ YELLOW YELLOW YELLOW    RED   BLUE
                                                           ______  ______ GREEN  GREEN ______ ______
                 >;
-            layer-id = <RSE>;
+            layer-id = <2>;
         };
         adjust {
             bindings = <
@@ -64,7 +64,7 @@
                   GREEN ______     ______     ______    ______ ______                                            ______ ______ ______ ______    ______   ______
                                                           ______  ______ ______  ______ ______ ______
                 >;
-            layer-id = <ADJ>;
+            layer-id = <3>;
         };
     };
 };
