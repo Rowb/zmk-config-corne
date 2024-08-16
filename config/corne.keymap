@@ -38,37 +38,37 @@
     combos {
         compatible = "zmk,combos";
 
-        to_game_layer {
+        combo_to_game_layer {
             bindings = <&to 4>;
             key-positions = <27 14>;
             layers = <0>;
         };
 
-        to_default {
+        combo_to_default {
             bindings = <&to 0>;
             key-positions = <15 3>;
             layers = <4>;
         };
 
-        backspace_combo {
+        combo_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <37 36>;
             layers = <0>;
         };
 
-        delete_combo {
+        combo_delete {
             bindings = <&kp DEL>;
             key-positions = <37 38>;
             layers = <0>;
         };
 
-        git_pull {
+        combo_git_pull {
             bindings = <&git_pull>;
             key-positions = <29 28>;
             layers = <3>;
         };
 
-        cs_mic {
+        combo_cs_mic {
             bindings = <&kp K>;
             key-positions = <37 38>;
             layers = <4>;
