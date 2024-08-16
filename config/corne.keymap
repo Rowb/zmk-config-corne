@@ -74,7 +74,7 @@
             layers = <4>;
         };
 
-        copy {
+        combo_copy {
             bindings = <&kp LC(C)>;
             key-positions = <2 3 4>;
             layers = <0 1 2>;
