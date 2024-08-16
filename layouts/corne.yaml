@@ -80,12 +80,12 @@ layers:
   - '9'
   - '0'
   - {t: ▽, type: trans}
-  - TAB
+  - {t: TAB, h: adjust}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DEL
+  - {t: DEL, h: adjust}
   raise:
   - KP NUM
   - /
@@ -125,8 +125,8 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - RET
-  - ESCAPE
+  - {t: ENTER, h: adjust}
+  - {t: ESC, h: adjust}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   adjust:
