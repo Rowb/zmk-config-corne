@@ -25,6 +25,7 @@ draw_config:
     rect.ghost, rect.combo.ghost { fill: #ddd; stroke-dasharray: none; stroke-width: 1;}
     svg.keymap { background-color: #303030;}
     text.label { stroke: none; fill: #e0f0f0;}
+    rect.combo, rect.combo-separate { fill: #CCDDFF; }
 
   footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
   shrink_wide_legends: 5
