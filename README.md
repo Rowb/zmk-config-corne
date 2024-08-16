@@ -16,6 +16,10 @@
 - [ZMK](https://zmk.dev/)
 - [Keymap editor web](https://nickcoutsos.github.io/keymap-editor/)
 
+## Keymap
+
+![Keymap](keymap-drawer/corne.svg)
+
 ## Backlight
 
 - [Configurations](https://github.com/zmkfirmware/zmk/pull/1895/files#diff-cbfa08fa13ebf5e1f3e9ffbe7ac696a072575071a36bf6ab139d7a152ab38811R166)
