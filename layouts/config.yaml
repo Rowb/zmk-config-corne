@@ -63,8 +63,9 @@ parse_config:
     "&mkp MB4": Back Click
     "&mkp MB5": Forward Click
     "&lt 2 TAB":
-      shifted: L2
-      tap: $$mdi:keyboard-tab$$
+      shifted: $$mdi:keyboard-space$$
+      tap: L2
+      hold: $$mdi:gesture-tap-hold$$
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
