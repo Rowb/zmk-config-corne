@@ -375,8 +375,9 @@ rect.combo, rect.combo-separate { fill: #CCDDFF; }
 </g>
 <g transform="translate(240, 219)" class="key keypos-36">
 <rect rx="6" ry="6" x="-28" y="-28" width="57" height="57" class="key"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:keyboard-tab"/>
-<text x="0" y="-24" class="key shifted">L2</text>
+<text x="0" y="0" class="key tap">L2</text>
+<use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="-9" y="6" height="18" width="18.0" class="key hold glyph mdi:gesture-tap-hold"/>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-9" y="-24" height="18" width="18.0" class="key shifted glyph mdi:keyboard-space"/>
 </g>
 <g transform="translate(306, 228) rotate(15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-28" y="-28" width="57" height="57" class="key"/>
