@@ -3,9 +3,10 @@ manifest:
     - name: darknao
       url-base: https://github.com/darknao
   projects:
-      - name: zmk
+    - name: zmk
       remote: darknao
-      revision: tree/darknao/rgb-dts
+      revision: darknao/rgb-dts
+      path: zmk
       import: app/west.yml
   self:
     path: config
