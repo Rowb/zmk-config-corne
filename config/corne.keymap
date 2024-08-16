@@ -44,14 +44,8 @@
                 BLUE BLUE BLUE    BLUE BLUE BLUE                              BLUE BLUE BLUE BLUE BLUE BLUE
                 ______ PURPLE    PURPLE    PURPLE    PURPLE PURPLE                          PURPLE PURPLE PURPLE PURPLE    PURPLE   ______
                                                           YELLOW  ______ ______  ______ ______ YELLOW
-<<<<<<< HEAD
                 >;
             layer-id = <1>;
-=======
-            >;
-
-            layer-id = <LWR>;
->>>>>>> d493178283dd5015d4770a1ed6d06d76fb03d06f
         };
 
         raise {
@@ -60,14 +54,8 @@
                 RED RED BLUE    BLUE BLUE RED                                            ______ YELLOW BLUE BLUE BLUE ______
                   ______ BLUE    BLUE    BLUE    BLUE PURPLE                                            ______ YELLOW YELLOW YELLOW    RED   BLUE
                                                           ______  ______ GREEN  GREEN ______ ______
-<<<<<<< HEAD
                 >;
             layer-id = <2>;
-=======
-            >;
-
-            layer-id = <RSE>;
->>>>>>> d493178283dd5015d4770a1ed6d06d76fb03d06f
         };
 
         adjust {
@@ -76,14 +64,8 @@
                 RED BLUE  BLUE  BLUE  BLUE  BLUE                           BLUE BLUE BLUE BLUE BLUE RED
                   GREEN ______     ______     ______    ______ ______                                            ______ ______ ______ ______    ______   ______
                                                           ______  ______ ______  ______ ______ ______
-<<<<<<< HEAD
                 >;
             layer-id = <3>;
-=======
-            >;
-
-            layer-id = <ADJ>;
->>>>>>> d493178283dd5015d4770a1ed6d06d76fb03d06f
         };
     };
 };
