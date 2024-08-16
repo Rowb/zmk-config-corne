@@ -18,7 +18,7 @@
 
 ## Keymap
 
-![Keymap](keymap-drawer/corne.svg)
+![Keymap](layouts/corne.svg)
 
 ## Backlight
 

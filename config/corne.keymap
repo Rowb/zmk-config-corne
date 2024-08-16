@@ -22,7 +22,6 @@
 &mt { quick-tap-ms = <200>; };
 
 #define TAPPING_TERM 200
-
 #define GREEN 0x00ff00
 #define RED 0xff0000
 #define BLUE 0x0000ff
@@ -37,7 +36,7 @@
 
 / {
     underglow-layer {
-        compatible  = "zmk,underglow-layer";
+        compatible = "zmk,underglow-layer";
 
         lower {
             bindings = <
@@ -45,26 +44,46 @@
                 BLUE BLUE BLUE    BLUE BLUE BLUE                              BLUE BLUE BLUE BLUE BLUE BLUE
                 ______ PURPLE    PURPLE    PURPLE    PURPLE PURPLE                          PURPLE PURPLE PURPLE PURPLE    PURPLE   ______
                                                           YELLOW  ______ ______  ______ ______ YELLOW
+<<<<<<< HEAD
                 >;
             layer-id = <1>;
+=======
+            >;
+
+            layer-id = <LWR>;
+>>>>>>> d493178283dd5015d4770a1ed6d06d76fb03d06f
         };
+
         raise {
             bindings = <
                 WHITE   RED   BLUE   BLUE   BLUE   RED                                            ______   GOLD ORANGE ORANGE ORANGE    RED
                 RED RED BLUE    BLUE BLUE RED                                            ______ YELLOW BLUE BLUE BLUE ______
                   ______ BLUE    BLUE    BLUE    BLUE PURPLE                                            ______ YELLOW YELLOW YELLOW    RED   BLUE
                                                           ______  ______ GREEN  GREEN ______ ______
+<<<<<<< HEAD
                 >;
             layer-id = <2>;
+=======
+            >;
+
+            layer-id = <RSE>;
+>>>>>>> d493178283dd5015d4770a1ed6d06d76fb03d06f
         };
+
         adjust {
             bindings = <
                 PURPLE  TEAL  ______  ______  ______  ______              ______  ______  ______  ______  ______  ______
                 RED BLUE  BLUE  BLUE  BLUE  BLUE                           BLUE BLUE BLUE BLUE BLUE RED
                   GREEN ______     ______     ______    ______ ______                                            ______ ______ ______ ______    ______   ______
                                                           ______  ______ ______  ______ ______ ______
+<<<<<<< HEAD
                 >;
             layer-id = <3>;
+=======
+            >;
+
+            layer-id = <ADJ>;
+>>>>>>> d493178283dd5015d4770a1ed6d06d76fb03d06f
         };
     };
 };
@@ -195,19 +214,19 @@
 
         lower_layer {
             bindings = <
-&kp UNDER       &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp F6     &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &trans
-                                  &kp TAB   &trans    &trans       &trans     &trans    &kp DEL
+&kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5       &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
+&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+&mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
+                                  &lt 3 TAB  &trans    &trans       &trans     &trans    &lt 3 DEL
             >;
         };
 
         raise_layer {
             bindings = <
-&kp KP_NUM       &kp SLASH     &kp N1        &kp N2        &kp N3        &kp MINUS     &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
-&mt LCTRL EQUAL  &kp ASTERISK  &kp N4        &kp N5        &kp N6        &kp PLUS      &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-&trans           &kp NUMBER_0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERIOD    &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                             &trans        &trans        &kp RET       &kp ESCAPE    &trans    &trans
+&kp KP_NUM       &kp SLASH     &kp N1        &kp N2        &kp N3        &kp MINUS      &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS
+&mt LCTRL EQUAL  &kp ASTERISK  &kp N4        &kp N5        &kp N6        &kp PLUS       &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
+&trans           &kp NUMBER_0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERIOD     &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
+                                             &trans        &trans        &lt 3 ENTER    &lt 3 ESC     &trans    &trans
             >;
         };
 
@@ -230,11 +249,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        adj_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
