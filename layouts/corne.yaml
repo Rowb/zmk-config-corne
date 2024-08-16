@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - {t: '[', h: RIGHT GUI}
-  - LCTRL
+  - Ctrl
   - A
   - S
   - D
@@ -24,8 +24,8 @@ layers:
   - K
   - L
   - ;
-  - {t: '''', h: RCTRL}
-  - LALT
+  - {t: '''', h: Ctrl}
+  - Alt
   - Z
   - X
   - C
@@ -36,13 +36,13 @@ layers:
   - ','
   - .
   - /
-  - {t: \, h: RALT}
-  - {t: TAB, h: raise}
-  - {t: SPACE, h: LSHFT}
-  - {t: RET, h: lower}
-  - {t: ESC, h: lower}
+  - {t: \, h: Alt}
+  - {t: ↹, h: raise}
+  - {t: ␣, h: Shift}
+  - {t: ⏎, h: lower}
+  - {t: Esc, h: lower}
   - BACKSPACE
-  - {t: DEL, h: raise}
+  - {t: ⌦, h: raise}
   lower:
   - _
   - F1
@@ -56,7 +56,7 @@ layers:
   - F9
   - F10
   - F11
-  - {t: +, h: LCTRL}
+  - {t: +, h: Ctrl}
   - '!'
   - '@'
   - '#'
@@ -67,8 +67,8 @@ layers:
   - '*'
   - (
   - )
-  - {t: '-', h: RCTRL}
-  - {t: '=', h: LALT}
+  - {t: '-', h: Ctrl}
+  - {t: '=', h: Alt}
   - '1'
   - '2'
   - '3'
@@ -80,12 +80,12 @@ layers:
   - '9'
   - '0'
   - {t: ▽, type: trans}
-  - {t: TAB, h: adjust}
+  - {t: ↹, h: adjust}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: DEL, h: adjust}
+  - {t: ⌦, h: adjust}
   raise:
   - KP NUM
   - /
@@ -93,45 +93,45 @@ layers:
   - '2'
   - '3'
   - '-'
-  - VOL UP
-  - HOME
-  - PSCRN
-  - PG UP
+  - Vol Up
+  - Home
+  - Print Scrn
+  - Page Up
   - SLCK
-  - CAPS
-  - {t: '=', h: LCTRL}
+  - Caps Lock
+  - {t: '=', h: Ctrl}
   - '*'
   - '4'
   - '5'
   - '6'
   - +
   - MUTE
-  - LEFT
-  - UP
-  - RIGHT
-  - INS
-  - {t: APP, h: RCTRL}
+  - ←
+  - ↑
+  - →
+  - Insert
+  - {t: APP, h: Ctrl}
   - {t: ▽, type: trans}
   - '0'
   - '7'
   - '8'
   - '9'
   - .
-  - VOL DN
-  - END
-  - DOWN
-  - PG DN
-  - PAUSE BREAK
+  - Vol Down
+  - End
+  - ↓
+  - Page Down
+  - Pause Break
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ENTER, h: adjust}
-  - {t: ESC, h: adjust}
+  - {t: Esc, h: adjust}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   adjust:
-  - '&bootloader'
-  - '&sys_reset'
+  - Boot
+  - Reset
   - ''
   - ''
   - ''
@@ -143,11 +143,11 @@ layers:
   - ''
   - ''
   - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
   - RGB BRI
   - RGB HUI
   - RGB SAI
@@ -195,9 +195,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+ TAB
-  - VOL DN
-  - LCTRL
+  - Alt+ ↹
+  - Vol Down
+  - Ctrl
   - A
   - S
   - D
@@ -207,11 +207,11 @@ layers:
   - M
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+ TAB
+  - Win Prev
   - MUTE
   - C
-  - SPACE
-  - TAB
+  - ␣
+  - ↹
   - K
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -226,7 +226,7 @@ combos:
   k: BACKSPACE
   l: [default]
 - p: [37, 38]
-  k: DEL
+  k: ⌦
   l: [default]
 - p: [29, 28]
   k: '&git_pull'
@@ -237,6 +237,8 @@ combos:
 - p: [2, 3, 4]
   k: Ctl+ C
   l: [default, lower, raise]
+  a: top
+  o: 0.15
 - p: [2, 4]
   k: Ctl+ V
   l: [default, raise, lower]
