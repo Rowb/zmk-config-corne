@@ -38,7 +38,7 @@ layers:
   - {t: /, s: '?'}
   - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
   - {t: '$$mdi:keyboard-tab$$', h: raise}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: RET, h: lower}
   - {t: '$$mdi:keyboard-esc$$', h: lower}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -184,7 +184,7 @@ layers:
   - T
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - VOLUME UP
+  - $$mdi:volume-high$$
   - LEFT SHIFT
   - Q
   - W
@@ -208,7 +208,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Win Prev
-  - MUTE
+  - $$mdi:volume-off$$
   - C
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-tab$$
