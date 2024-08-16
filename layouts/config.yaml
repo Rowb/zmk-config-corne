@@ -36,8 +36,6 @@ draw_config:
 
 parse_config:
   raw_binding_map:
-    "&sys_reset": Reset
-    "&bootloader": Boot
     "&swapper": Win Next
     "&caps_word": Caps Word
     "&inv_qm": ¿
@@ -51,13 +49,6 @@ parse_config:
     "&kp LS(INS)": Paste
     "&kp LG(L)": Lock
     "&lt LG(L)": Lock
-    "&out OUT_USB": Out USB
-    "&out OUT_BLE": Out BLE
-    "&bt BT_SEL 0": BT 1
-    "&bt BT_SEL 1": BT 2
-    "&bt BT_SEL 2": BT 3
-    "&bt BT_SEL 3": BT 4
-    "&bt BT_SEL 4": BT 5
     "&mmv MOVE_UP": Mouse ↑
     "&mmv MOVE_DOWN": Mouse ↓
     "&mmv MOVE_LEFT": Mouse ←
@@ -71,6 +62,41 @@ parse_config:
     "&mkp MCLK": Middle Click
     "&mkp MB4": Back Click
     "&mkp MB5": Forward Click
+    "&lt 2 TAB":
+      shifted: L2
+      tap: $$mdi:keyboard-tab$$
+    "&bt BT_SEL 0":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 1
+    "&bt BT_SEL 1":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 2
+    "&bt BT_SEL 2":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 3
+    "&bt BT_SEL 3":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 4
+    "&bt BT_SEL 4":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 5
+    "&out OUT_TOG":
+      shifted: $$mdi:usb$$
+      tap: $$mdi:toggle-switch$$
+      hold: $$mdi:bluetooth$$
+
+    # Reset
+    "&sys_reset":
+      type: bootloader
+      tap: $$mdi:backup-restore$$
+    "&bootloader":
+      tap: $$mdi:progress-download$$
+
 
   toggle_label: $$mdi:gesture-tap-hold$$
   tap_toggle_label: tap-toggle
