@@ -194,6 +194,7 @@ rect.held, rect.combo.held { fill: #fdd;}
 rect.ghost, rect.combo.ghost { fill: #ddd; stroke-dasharray: none; stroke-width: 1;}
 svg.keymap { background-color: #303030;}
 text.label { stroke: none; fill: #e0f0f0;}
+rect.combo, rect.combo-separate { fill: #CCDDFF; }
 </style>
 <g transform="translate(0, 0)" class="layer-default">
 <text x="0" y="0" class="label" id="default">default</text>
