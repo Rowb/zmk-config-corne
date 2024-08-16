@@ -1,12 +1,11 @@
 manifest:
   remotes:
-    - name: darknao
-      url-base: https://github.com/darknao
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
-      remote: darknao
-      revision: darknao/rgb-dts
-      path: zmk
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
