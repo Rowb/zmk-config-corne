@@ -19,7 +19,8 @@
 &mt { quick-tap-ms = <200>; };
 
 
-  /  combos {
+  / {
+      combos {
         compatible = "zmk,combos";
 
         combo_to_game_layer {
