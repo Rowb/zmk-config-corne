@@ -18,22 +18,6 @@
 
 &mt { quick-tap-ms = <200>; };
 
-/ {
-    behaviors {
-        /*
-    * td_lock groups locking functions into one key:
-    *  - tap once to lock the host
-    *  - tap twice to put the host to sleep
-    */
-
-        td_lock: tap_dance_lock {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LOCK";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM>;
-            bindings = <&kp LG(LC(Q))>, <&kp LG(LA(C_EJECT))>;
-        };
-    };
 
     combos {
         compatible = "zmk,combos";
