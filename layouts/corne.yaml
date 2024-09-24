@@ -132,7 +132,7 @@ layers:
   adjust:
   - $$mdi:progress-download$$
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - ''
+  - '&studio_unlock'
   - ''
   - ''
   - ''
